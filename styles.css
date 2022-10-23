@@ -208,6 +208,7 @@ section  {
   .card:active {
     transform: translateX(1rem);
   } 
+  
   .card-list {
     display: flex;
     padding: 3rem;
