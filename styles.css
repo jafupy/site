@@ -207,7 +207,6 @@ section  {
 
   .card:active {
     transform: translateX(1rem);
-    animation: jiggle, 0.5s;
   } 
   .card-list {
     display: flex;
