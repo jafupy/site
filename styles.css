@@ -46,7 +46,8 @@ section  {
 }
 
 .button {
-
+  padding: 5px;
+  color:  linear-gradient(90deg, #7c60bd, #609bbd);
 }
 
 /*### nav bar###*/
@@ -174,12 +175,12 @@ section  {
 
   .card:hover {
     transform: translateY(-1rem);
-    animation: jiggle .5s;
   } 
   .card-list {
     display: flex;
     padding: 3rem;
     overflow-x: auto;
+    flex-direction: row;
   }
 
 
@@ -224,7 +225,7 @@ section  {
   }
 
 }
-
+/*
 @media (min-width: 701px) {
   .card-list {
     display: flex;
@@ -232,4 +233,4 @@ section  {
     flex-direction: column;
     align-items: center;
   }
-}
+}*/
