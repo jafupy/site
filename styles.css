@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #17141d;
+    color: white;
+    font-family: 'Urbanist', sans-serif;
+
+}
+
+
+
+.navbar {
+  position:sticky;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding: 20px;
+
+  background: linear-gradient(45deg, #bd607f, #bd7660);
+  border-radius:25px;
+
+  margin: 20px;
+}
+
+.logo {
+  max-height: 100%;
+}
+
+.nav-BTN {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.brand {
+  margin-right: auto;
+}
+
+.title-div {
+  display: flex;
+  justify-content: center;
+
+  width: 100%;
+
+}
+h1 {
+  font-size: 32px;
+}
+
+
+section  {
+
+  margin-left: 20vw;
+  margin-right: 20vw;
+
+  background:#282335;
+
+  padding: 20px;
+  border-radius: 20px;
+
+  display: flex;
+  justify-items: center;
+
+}
+
+
+
+
+/*------------------ card stuff ------------------*/
+.card-list {
+    display: flex;
+    padding: 3rem;
+    overflow-x: auto;
+}
+
+
+
+.card-list::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+
+    
+}
+.card-list::-webkit-scrollbar-thumb {
+    background: #000;
+    border-radius: 10px;
+    
+}
+
+.card-list::-webkit-scrollbar-track {
+  background: #000;
+} 
+
+
+
+
+/*------------------------------ card styles ------------------------------*/
+
+.card {
+    height: 350px;
+    width: 275px;
+    padding: 1.5rem;
+    border-radius: 16px;
+    background: #17141d;
+    box-shadow: -1rem 0 3rem #000;
+    display: flex;
+    flex-direction: column;
+    transition: .2s;
+    margin: 0;
+    scroll-snap-align: start;
+    clear: both;
+    position: relative;
+}
+
+.card:focus-within~.card, .card:hover~.card {
+    transform: translateX(130px);
+}
+
+.card:hover {
+    transform: translateY(-1rem);
+    background: linear-gradient(90deg, #7c60bd, #609bbd);
+} 
+#jafood:hover {
+
+    background: linear-gradient(90deg, #bd6060, #bd9c60);
+}
+.card:hover p, .card:hover h2{
+    color: #000;
+}
+
+.card:not(:first-child) {
+    margin-left: -130px;
+}
+
+
+.card-header {
+    margin-bottom: auto;
+
+    width: 95%;
+}
+
+.card-header p {
+    font-size: 14px;
+    margin: 0 0 1rem;
+    color: #7a7a8c;
+}
+
+.card-header h2 {
+    font-size: 20px;
+    margin: .25rem 0 auto;
+    text-decoration: none;
+    color: inherit;
+    border: 0;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.tag-list {
+  display: flex;
+  flex-direction: row;
+}
+.tag {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  border-radius: 20px;
+
+  padding: 10px;
+
+  height: 40px;
+  width: auto;
+}
+
+.tag-svg {
+  max-height: 100%;
+  fill: #fff;
+}
+.card:hover .tag-svg {
+  fill: #000;
+}
+
+.card:hover .tag {
+  border-color: #000;
+}
