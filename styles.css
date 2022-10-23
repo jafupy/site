@@ -10,7 +10,6 @@ body {
 }
 
 
-
 .navbar {
   position:sticky;
   display: flex;
@@ -69,6 +68,8 @@ section  {
 
 
 /*------------------ card stuff ------------------*/
+
+@media (min-width: 780px) {
 .card-list {
     display: flex;
     padding: 3rem;
@@ -93,6 +94,57 @@ section  {
   background: #000;
 } 
 
+.card:focus-within~.card, .card:hover~.card {
+  transform: translateX(130px);
+}
+
+.card:hover {
+  transform: translateY(-1rem);
+  background: linear-gradient(90deg, #7c60bd, #609bbd);
+} 
+#jafood:hover {
+
+  background: linear-gradient(90deg, #bd6060, #bd9c60);
+}
+.card:hover p, .card:hover h2{
+  color: #000;
+}
+
+.card:not(:first-child) {
+  margin-left: -130px;
+}
+
+
+.card-header {
+  margin-bottom: auto;
+
+  width: 95%;
+}
+
+.card-header p {
+  font-size: 14px;
+  margin: 0 0 1rem;
+  color: #7a7a8c;
+}
+
+.card-header h2 {
+  font-size: 20px;
+  margin: .25rem 0 auto;
+  text-decoration: none;
+  color: inherit;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.card:hover .tag-svg {
+  fill: #000;
+}
+
+.card:hover .tag {
+  border-color: #000;
+}
+/*end of big screen*/
+}
 
 
 
@@ -114,48 +166,7 @@ section  {
     position: relative;
 }
 
-.card:focus-within~.card, .card:hover~.card {
-    transform: translateX(130px);
-}
 
-.card:hover {
-    transform: translateY(-1rem);
-    background: linear-gradient(90deg, #7c60bd, #609bbd);
-} 
-#jafood:hover {
-
-    background: linear-gradient(90deg, #bd6060, #bd9c60);
-}
-.card:hover p, .card:hover h2{
-    color: #000;
-}
-
-.card:not(:first-child) {
-    margin-left: -130px;
-}
-
-
-.card-header {
-    margin-bottom: auto;
-
-    width: 95%;
-}
-
-.card-header p {
-    font-size: 14px;
-    margin: 0 0 1rem;
-    color: #7a7a8c;
-}
-
-.card-header h2 {
-    font-size: 20px;
-    margin: .25rem 0 auto;
-    text-decoration: none;
-    color: inherit;
-    border: 0;
-    display: inline-block;
-    cursor: pointer;
-}
 
 
 .tag-list {
@@ -178,11 +189,4 @@ section  {
 .tag-svg {
   max-height: 100%;
   fill: #fff;
-}
-.card:hover .tag-svg {
-  fill: #000;
-}
-
-.card:hover .tag {
-  border-color: #000;
 }
