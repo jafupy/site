@@ -202,7 +202,7 @@ section  {
 
 /*### cards - mobile ###*/
 
-@media (max-width: 700px) {
+@media (min-width: 350) and (max-width: 700px) {
 
   .card:active {
     transform: translateX(1rem);
