@@ -204,7 +204,7 @@ section  {
 
 /*### cards - mobile ###*/
 
-@media (min-width: 350) and (max-width: 889) {
+@media (max-width:400) {
 
   .card:hover {
     transform: translateX(1rem);
