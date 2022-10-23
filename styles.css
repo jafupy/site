@@ -171,7 +171,7 @@ section  {
 
 /*### cards - desktop ###*/
 
-@media (min-width: 890px) {
+@media (min-width: 601px) {
 
   .card:hover {
     transform: translateY(-1rem);
@@ -203,8 +203,7 @@ section  {
 
 
 /*### cards - mobile ###*/
-
-@media (max-width:400) {
+@media (max-width:600px) {
 
   .card:hover {
     transform: translateX(1rem);
