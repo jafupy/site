@@ -250,7 +250,7 @@ section  {
     margin-top: -230px;
   }
 
-  .card:focus-within~.card, .card:hover~.card {
+  .card:focus-within~.card, .card:active~.card {
     transform: translateY(235px);
   }
 
