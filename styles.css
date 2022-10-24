@@ -123,7 +123,7 @@ section  {
 }
 
 .card-header .icons {
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 1rem;
   color: #7a7a8c;
 
@@ -233,7 +233,7 @@ section  {
 /*### cards - mobile ###*/
 @media (max-width:600px) {
 
-  .card:hover, .card .icons:active {
+  .card:hover {
     transform: translateX(1rem);
     animation: jiggle .5;
   } 
