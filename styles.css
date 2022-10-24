@@ -156,11 +156,11 @@ section  {
   width: auto;
 }
 
-.card:hover .tag-svg {
+.card:hover .tag-svg, .card:active .tag-svg{
   fill: #000;
 }
 
-.card:hover .tag {
+.card:hover .tag, .card:active .tag {
   border-color: #000;
 }
 
@@ -177,7 +177,7 @@ section  {
 
   background: linear-gradient(90deg, #bd6060, #bd9c60);
 }
-.card:hover p, .card:hover h2, .card:hover .icons {
+.card:hover p, .card:hover h2, .card:hover .icons, .card:active p, .card:active h2, .card:active .icons {
   color: #000;
 }
 
