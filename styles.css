@@ -103,7 +103,7 @@ section  {
   box-shadow: -1rem 0 3rem rgba(0, 0, 0, 0.568);
   display: flex;
   flex-direction: column;
-  transition: .2s;
+  transition: .1s;
   margin: 0;
   scroll-snap-align: start;
   clear: both;
@@ -250,7 +250,7 @@ section  {
     margin-top: -230px;
   }
 
-  .card:focus-within~.card, .card:active~.card {
+  .card:focus-within~.card, .card:hover~.card, .card:active~.card {
     transform: translateY(235px);
   }
 
