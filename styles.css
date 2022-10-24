@@ -177,7 +177,7 @@ section  {
 
   background: linear-gradient(90deg, #bd6060, #bd9c60);
 }
-.card:hover p, .card:hover h2, .card:hover .icons{
+.card:hover p, .card:hover h2, .card:hover .icons {
   color: #000;
 }
 
@@ -204,7 +204,6 @@ section  {
 
   .card:hover {
     transform: translateY(-1rem);
-    animation: jiggle .5;
   } 
   .card-list {
     display: flex;
