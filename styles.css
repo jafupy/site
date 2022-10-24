@@ -233,7 +233,7 @@ section  {
 /*### cards - mobile ###*/
 @media (max-width:600px) {
 
-  .card:hover, .card:active {
+  .card:active {
     transform: translateX(1rem);
     animation: jiggle .5;
   } 
