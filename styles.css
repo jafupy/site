@@ -71,7 +71,8 @@ section  {
   position:sticky;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: right;
+  gap:20;
   align-items: center;
   padding: 20px;
 
@@ -195,7 +196,7 @@ section  {
 
 /*### cards - desktop ###*/
 
-@media (min-width: 601px) {
+@media (min-width: 600px) {
 
   .card-header .icons {
     visibility: hidden;
@@ -255,4 +256,3 @@ section  {
   }
 
 }
-
