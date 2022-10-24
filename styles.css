@@ -169,15 +169,15 @@ section  {
   fill: #fff;
 }
 
-#site:hover {
+#site.active:hover {
   background: linear-gradient(90deg, #7c60bd, #609bbd);
 } 
 
-#jafood:hover {
+#jafood.active:hover {
 
   background: linear-gradient(90deg, #bd6060, #bd9c60);
 }
-.card:hover p, .card:hover h2, .card:hover .icons, .card:active p, .card:active h2, .card:active .icons {
+/*.card:hover p, .card:hover h2, .card:hover .icons, */.card:active p, .card:active h2, .card:active .icons {
   color: #000;
 }
 
@@ -250,8 +250,9 @@ section  {
     margin-top: -230px;
   }
 
-  .card:focus-within~.card, .card:hover~.card, .card:active~.card {
+  /*.card:focus-within~.card, .card:hover~.card, */.card.expanded~.card {
     transform: translateY(235px);
   }
+
 
 }
