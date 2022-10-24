@@ -55,7 +55,8 @@ section  {
   position:sticky;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: right;
+  gap:20;
   align-items: center;
   padding: 20px;
 
