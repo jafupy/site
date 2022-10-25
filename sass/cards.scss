@@ -1,3 +1,6 @@
+@media (min: 600px) {
+    
+
 .card-list {
     width: 100%;
     margin-top: -4rem;
@@ -50,4 +53,6 @@
 .card:not(:first-child) {
     margin-left: -130px;
     }
+}
+
 }
