@@ -36,58 +36,16 @@ nav ul a {
   text-decoration: none;
   color: #cfcfe7;
 }
-nav button {
+nav div {
+  transform: rotate(-90deg);
+}
+nav div a {
   padding: 5px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Urbanist", sans-serif;
-  height: 100vh;
-  background: #040406;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
   color: #cfcfe7;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  -ms-scroll-snap-type: y proximity;
-      scroll-snap-type: y proximity;
-  overflow-y: scroll;
-}
-
-.page {
-  flex: none;
-  scroll-snap-align: start;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.page div.welcome h1 {
-  font-size: 15rem;
-  font-weight: 400;
-}
-.page:not(:last-child) {
-  box-shadow: 2px 2px #7373d3;
-}
-
-h1.big {
-  font-size: 32em;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-::-webkit-scrollbar:hover {
-  width: 5px;
-}
+  font-family: "Urbanist", sans-serif;
+}/*# sourceMappingURL=nav.css.map */

@@ -1,0 +1,172 @@
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+nav {
+  position: absolute;
+  background: linear-gradient(90deg, #49208a, #1c1c6d);
+  gap: 20px;
+  flex: none;
+  width: 60px;
+  height: 80vh;
+  margin-block: 10vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 20px;
+}
+nav img {
+  width: 40px;
+}
+nav div {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  transform: rotate(-90deg);
+  margin-inline: 30px;
+}
+nav div h3 {
+  font-weight: 300;
+}
+nav ul {
+  transform: rotate(-90deg);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+nav ul a {
+  text-decoration: none;
+  color: #cfcfe7;
+}
+nav div {
+  transform: rotate(-90deg);
+}
+nav div a {
+  padding: 5px;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 5px;
+  border: none;
+  text-decoration: none;
+  color: #cfcfe7;
+  font-family: "Urbanist", sans-serif;
+}
+
+h1.big {
+  font-size: 32em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  height: 100vh;
+  background: #040406;
+  color: #cfcfe7;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar:hover {
+  width: 5px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-list {
+  width: 100%;
+  margin-top: -4rem;
+  padding: 6rem;
+  display: flex;
+  justify-content: center;
+  overflow-x: scroll;
+}
+.card-list .card {
+  width: 275px;
+  height: 350px;
+  background: #080812;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: -1rem 0 3rem rgba(115, 115, 211, 0.7607843137);
+  transition: 0.2s;
+}
+.card-list .card header {
+  margin-bottom: auto;
+}
+.card-list .card header p {
+  font-size: 14px;
+  margin: 0 0 1rem;
+  color: #7a7a8c;
+}
+.card-list .card header h2 {
+  font-size: 20px;
+  margin: 0.25rem 0 auto;
+  text-decoration: none;
+  color: inherit;
+  border: 0;
+  display: inline-block;
+  cursor: pointer;
+}
+.card-list .card:focus-within ~ .card, .card-list .card:hover ~ .card {
+  transform: translateX(130px);
+}
+.card-list .card:hover {
+  transform: translateY(-1rem);
+}
+.card-list .card:not(:first-child) {
+  margin-left: -130px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  -ms-scroll-snap-type: y proximity;
+      scroll-snap-type: y proximity;
+  overflow-y: scroll;
+}
+
+.page {
+  flex: none;
+  scroll-snap-align: start;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.page div.welcome h1 {
+  font-size: 15rem;
+  font-weight: 400;
+  margin-top: -3.5rem;
+}
+.page div.welcome h3 {
+  font-weight: 500;
+  margin-bottom: 0;
+}
+.page:not(:last-child) {
+  box-shadow: 2px 2px #7373d3;
+}
+
+section .box {
+  width: 1000px;
+  height: 500px;
+  background: #080812;
+  border-radius: 20px;
+  box-shadow: 0px 0px 70px #7373d3;
+  padding: 20px;
+}
+
+img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}/*# sourceMappingURL=styles.css.map */
