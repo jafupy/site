@@ -1,0 +1,55 @@
+
+.card-list {
+    width: 100%;
+    margin-top: -4rem;
+    padding: 6rem;
+    display: flex;
+    justify-content: center;
+    overflow-x: scroll;
+
+    .card {
+        width: 275px;
+        height: 350px;
+        background: #080812;
+        border-radius: 16px;
+        padding:1.5rem;
+        box-shadow: -1rem 0 3rem #7373d3c2;
+        transition: 0.2s;
+
+        
+
+        header {
+            margin-bottom: auto;
+
+            p {
+                font-size: 14px;
+                margin: 0 0 1rem;
+                color: #7a7a8c;
+                }
+
+            h2 {
+                font-size: 20px;
+                margin: .25rem 0 auto;
+                text-decoration: none;
+                color: inherit;
+                border: 0;
+                display: inline-block;
+                cursor: pointer;
+                }
+            }
+        }
+
+    .card:focus-within~.card, .card:hover~.card {
+        transform: translateX(130px);
+        }
+    .card:hover {
+        transform: translateY(-1rem);
+        }
+
+
+
+.card:not(:first-child) {
+    margin-left: -130px;
+    }
+}
+
