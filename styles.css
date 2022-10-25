@@ -51,37 +51,6 @@ nav div a {
   font-family: "Urbanist", sans-serif;
 }
 
-h1.big {
-  font-size: 32em;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Urbanist", sans-serif;
-  height: 100vh;
-  background: #040406;
-  color: #cfcfe7;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
-::-webkit-scrollbar:hover {
-  width: 5px;
-}
-
-.flex {
-  display: flex;
-  flex-direction: row;
-}
-
 @media (min: 600px) {
   .card-list {
     width: 100%;
@@ -170,4 +139,35 @@ section .box {
 img {
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+h1.big {
+  font-size: 32em;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Urbanist", sans-serif;
+  height: 100vh;
+  background: #040406;
+  color: #cfcfe7;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+::-webkit-scrollbar:hover {
+  width: 5px;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
 }/*# sourceMappingURL=styles.css.map */
