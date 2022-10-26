@@ -1,0 +1,104 @@
+ul.card-list {
+    display: flex;
+    padding:3rem;
+    padding-top: 6rem;
+    overflow-x: scroll;
+
+    &::-webkit-scrollbar {
+        width: 10px;
+        height: 10px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #201c29;
+        border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    .card {
+        height: 350px;
+        width: 275px;
+        flex:none;
+
+        padding: 1.5rem;
+        border-radius: 16px;
+        background: #040406;
+        box-shadow: -1rem 0 3rem #000;
+        display: flex;
+        flex-direction: column;
+        transition: .2s;
+        margin: 0;
+        scroll-snap-align: start;
+        clear: both;
+        position: relative;
+
+        &:focus-within~.card, &:hover~.card {
+            transform: translateX(130px);
+        } 
+        
+        &:hover {
+            transform: translateY(-1rem);
+            box-shadow: -1rem 0 3rem rgb(165, 43, 202);
+        } 
+        &:not(:first-child) {
+            margin-left: -130px;
+        }
+
+
+        header {
+            margin-bottom: auto;
+
+            p {
+                font-size: 14px;
+                margin: 0 0 1rem;
+                color: #7a7a8c;
+            }
+
+            h2 {
+                font-size: 20px;
+                margin: .25rem 0 auto;
+                text-decoration: none;
+                color: inherit;
+                border: 0;
+                display: inline-block;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+
+
+
+.tags {
+    margin: 1rem 0 2rem;
+    padding: .5rem 0 1rem;
+    line-height: 2;
+    margin-bottom: 0;
+}
+
+.tags a {
+    text-decoration: none;
+    font-style: normal;
+    font-weight: 700;
+    font-size: .5rem;
+    color: #7a7a8c;
+    text-transform: uppercase;
+    font-size: .66rem;
+    border: 3px solid #28242f;
+    border-radius: 2rem;
+    padding: .2rem .85rem .25rem;
+    position: relative;
+}
+
+.tags a:hover {
+    background: linear-gradient(90deg,#8412e0,#e52e71);
+    text-shadow: none;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-box-decoration-break: clone;
+    background-clip: text;
+    border-color: white;
+}
