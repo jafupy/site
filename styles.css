@@ -104,8 +104,8 @@ nav button.active {
 }
 
 .icon {
-  width: 1em;
-  height: 1em;
+  width: 2em;
+  height: 2em;
   stroke: #fff;
   fill: transparent;
   stroke-width: 1pt;
@@ -241,13 +241,13 @@ body .container section {
   margin: 0;
 }
 body .container section div.welcome h1 {
-  font-size: 16rem;
+  font-size: 32vw;
   margin-top: 0;
   font-weight: 400;
 }
 body .container section div.welcome h3 {
   font-size: 1.5rem;
-  margin-bottom: -2em;
+  margin-bottom: -2vh;
   font-weight: normal;
 }
 body .container section div#about {
