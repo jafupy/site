@@ -37,20 +37,25 @@ nav{
     margin: 0;
     font-size: 1.5em;
     display: flex;
-    @include breakpoints.media(">phone") {
+
+    @include breakpoints.media(">phone") {/* biga than fon */
         flex-direction: column;
         top: calc(50% - 140px);
         height: 320px;
         width: 30px;
-    } @include breakpoints.media("<=phone") {
-        top: calc(100vh - 64px);
+        justify-content: center;
+    } 
+    
+    @include breakpoints.media("<=phone") { /* fon */ 
+        bottom:5px;
+        left:calc((100vw - 85vw) / 2);
         flex-direction: row;
         height: 64px;
-        width: 100vw;
+        width: 85vw;
+        justify-content: space-around;
     }
+    
     align-items: center;
-    justify-content: center;
-
     background-color: #0b0b13;
     box-shadow: 0 0 #000;
     border-radius: 20px;
@@ -67,7 +72,7 @@ nav{
                 @include breakpoints.media(">phone") {
                     transform: translateX(15px);
                 } @include breakpoints.media("<=phone") {
-                    transform: translateY(15px);
+                    transform: translateY(-15px);
                 }
                padding:15px;
             }

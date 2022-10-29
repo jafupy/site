@@ -56,26 +56,28 @@ nav {
   font-size: 1.5em;
   display: flex;
   align-items: center;
-  justify-content: center;
   background-color: #0b0b13;
   box-shadow: 0 0 #000;
   border-radius: 20px;
   transition: 0.2s ease-out;
 }
 @media (min-width: 401px) {
-  nav {
+  nav { /* biga than fon */
     flex-direction: column;
     top: calc(50% - 140px);
     height: 320px;
     width: 30px;
+    justify-content: center;
   }
 }
 @media (max-width: 400px) {
-  nav {
-    top: calc(100vh - 64px);
+  nav { /* fon */
+    bottom: 5px;
+    left: 7.5vw;
     flex-direction: row;
     height: 64px;
-    width: 100vw;
+    width: 85vw;
+    justify-content: space-around;
   }
 }
 @media (min-width: 401px) {
@@ -93,7 +95,7 @@ nav button.active {
 }
 @media (max-width: 400px) {
   nav button.active {
-    transform: translateY(15px);
+    transform: translateY(-15px);
   }
 }
 @media (min-width: 401px) {
@@ -242,7 +244,6 @@ ul.card-list .card header h2 {
 
 body {
   margin: 0;
-  overflow-x: hidden;
   background-color: #040406;
   color: #f8f8ff;
   font-family: "Urbanist", sans-serif;
