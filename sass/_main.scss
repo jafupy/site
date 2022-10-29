@@ -3,8 +3,6 @@
 
 body {
     margin:0;
-    width: 100vw;
-    height: 100vh;
 
     ::-webkit-scrollbar {
 
@@ -17,8 +15,6 @@ body {
     font-family: 'Urbanist', sans-serif;
 
     .container {
-        scroll-snap-type: y mandatory;
-        overflow-y: scroll;
         
         
         section {
@@ -38,8 +34,9 @@ body {
                     font-weight: 400;
                 }
                 h3 {
+                    color: #f8f8ff;
                     font-size: 1.5rem;
-                    margin-bottom: -2vh;
+                    margin-bottom: -50px; 
                     font-weight: normal;
                 }
             }

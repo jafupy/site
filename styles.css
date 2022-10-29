@@ -52,7 +52,6 @@ html *, html *::before, html *::after {
 }
 nav {
   position: fixed;
-  top: calc(50% - 140px);
   margin: 0;
   font-size: 1.5em;
   display: flex;
@@ -61,31 +60,55 @@ nav {
   background-color: #0b0b13;
   box-shadow: 0 0 #000;
   border-radius: 20px;
-  flex-direction: column;
-  height: 280px;
-  width: 30px;
   transition: 0.2s ease-out;
 }
-nav:hover {
-  width: 60px;
+@media (min-width: 401px) {
+  nav {
+    flex-direction: column;
+    top: calc(50% - 140px);
+    height: 320px;
+    width: 30px;
+  }
 }
-nav:hover button.active {
-  transform: translateX(15px);
+@media (max-width: 400px) {
+  nav {
+    top: calc(100vh - 64px);
+    flex-direction: row;
+    height: 64px;
+    width: 100vw;
+  }
+}
+@media (min-width: 401px) {
+  nav {
+    width: 80px;
+  }
+}
+nav button.active {
   padding: 15px;
 }
-nav:hover button svg {
-  display: initial;
+@media (min-width: 401px) {
+  nav button.active {
+    transform: translateX(15px);
+  }
 }
-nav:hover button {
-  border-radius: 50%;
+@media (max-width: 400px) {
+  nav button.active {
+    transform: translateY(15px);
+  }
 }
-nav button {
+@media (min-width: 401px) {
+  nav button svg {
+    display: initial;
+  }
+}
+
+button {
   all: unset;
   z-index: 100;
   display: flex;
   cursor: pointer;
   position: relative;
-  border-radius: 25%;
+  border-radius: 50%;
   align-items: center;
   will-change: transform;
   justify-content: center;
@@ -94,10 +117,10 @@ nav button {
   padding-bottom: 15px;
   transition: transform var(--timeOut, var(--duration));
 }
-nav button svg {
-  display: none;
+button:active#men {
+  gay: true;
 }
-nav button.active {
+button.active {
   background-color: var(--bgColorItem);
   -webkit-animation: stroke 5s;
           animation: stroke 5s;
@@ -219,17 +242,10 @@ ul.card-list .card header h2 {
 
 body {
   margin: 0;
-  width: 100vw;
-  height: 100vh;
   overflow-x: hidden;
   background-color: #040406;
   color: #f8f8ff;
   font-family: "Urbanist", sans-serif;
-}
-body .container {
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-  overflow-y: scroll;
 }
 body .container section {
   scroll-snap-align: start;
@@ -246,8 +262,9 @@ body .container section div.welcome h1 {
   font-weight: 400;
 }
 body .container section div.welcome h3 {
+  color: #f8f8ff;
   font-size: 1.5rem;
-  margin-bottom: -2vh;
+  margin-bottom: -50px;
   font-weight: normal;
 }
 body .container section div#about {
