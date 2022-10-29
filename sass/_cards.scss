@@ -97,8 +97,8 @@ ul.card-list {
     background: linear-gradient(90deg,#8412e0,#e52e71);
     text-shadow: none;
     -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -webkit-box-decoration-break: clone;
+    background-clip: text;
+    box-decoration-break: clone;
     background-clip: text;
     border-color: white;
 }
