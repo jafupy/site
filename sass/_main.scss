@@ -27,33 +27,49 @@ body {
 
             div.welcome {
                 h1 {
-                    font-size: 32vw;
+                    font-size: min(32vw, 32rem);
                     margin-top: 0;
                     font-weight: 400;
                 }
                 h3 {
                     color: #f8f8ff;
                     font-size: 1.5rem;
-                    margin-bottom: -50px; 
+                    margin-bottom: 1.5rem; 
                     font-weight: normal;
                 }
             }
-
+            div { /* Global */
+                @include breakpoints.media(">phone") { /* big */
+                    width: 50vw;
+                } @include breakpoints.media("<=phone") {
+                    width:70vw;
+                }
+                height: fit-content;
+            }
             div#about {
-                width: 50vw;
-                height: 60vh;
                 gap:50px;
                 display: flex;
+                @include breakpoints.media("<=phone") {
+                    flex-direction: column;
+                }
 
                 padding: 25px;
                 background-color: #0b0b13;
                 box-shadow: 0px 0px 50px#4343F5;
                 border-radius: 25px;
+                text-align: justify;
+
+                img {
+                    @include breakpoints.media("<=phone") {
+                    max-width: 200px;
+                } @include breakpoints.media(">phone") {
+                    max-width: 50%;
+                }
+                    object-fit: contain;
+                }
             }
 
             div#projects {
-                width: 50vw;
-                height: 60vh;
 
                 padding: 25px;
                 background-color: #0b0b13;

@@ -1,5 +1,11 @@
+@use "_breakpoints";
+
 ul.card-list {
     display: flex;
+
+    @include breakpoints.media("<=phone") {
+        flex-direction: column;
+    }
     padding:3rem;
     padding-top: 6rem;
     overflow-x: scroll;
@@ -19,7 +25,8 @@ ul.card-list {
 
     .card {
         height: 350px;
-        width: 275px;
+        min-width: 275px;
+        max-width: 275px;
         flex:none none none;
 
         padding: 1.5rem;

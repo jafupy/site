@@ -50,7 +50,7 @@ nav{
         bottom:5px;
         left:calc((100vw - 85vw) / 2);
         flex-direction: row;
-        height: 64px;
+        height: 65px;
         width: 85vw;
         justify-content: space-around;
     }
@@ -64,7 +64,7 @@ nav{
     
     
         @include breakpoints.media(">phone") {
-            width:80px;
+            width:65px;
         }
         button {
             
@@ -118,8 +118,8 @@ nav{
 
 
 .icon {
-    width: 2em;
-    height: 2em;
+    width: 1.5em;
+    height: 1.5em;
     stroke: #fff;
     fill: transparent;
     stroke-width: 1pt;

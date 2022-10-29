@@ -75,14 +75,14 @@ nav {
     bottom: 5px;
     left: 7.5vw;
     flex-direction: row;
-    height: 64px;
+    height: 65px;
     width: 85vw;
     justify-content: space-around;
   }
 }
 @media (min-width: 401px) {
   nav {
-    width: 80px;
+    width: 65px;
   }
 }
 nav button.active {
@@ -129,8 +129,8 @@ button.active {
 }
 
 .icon {
-  width: 2em;
-  height: 2em;
+  width: 1.5em;
+  height: 1.5em;
   stroke: #fff;
   fill: transparent;
   stroke-width: 1pt;
@@ -156,6 +156,11 @@ ul.card-list {
   padding-top: 6rem;
   overflow-x: scroll;
 }
+@media (max-width: 400px) {
+  ul.card-list {
+    flex-direction: column;
+  }
+}
 ul.card-list::-webkit-scrollbar {
   width: 10px;
   height: 10px;
@@ -169,7 +174,8 @@ ul.card-list::-webkit-scrollbar-track {
 }
 ul.card-list .card {
   height: 350px;
-  width: 275px;
+  min-width: 275px;
+  max-width: 275px;
   flex: none none none;
   padding: 1.5rem;
   border-radius: 16px;
@@ -260,29 +266,60 @@ body .container section {
   margin: 0;
 }
 body .container section div.welcome h1 {
-  font-size: 32vw;
+  font-size: min(32vw, 32rem);
   margin-top: 0;
   font-weight: 400;
 }
 body .container section div.welcome h3 {
   color: #f8f8ff;
   font-size: 1.5rem;
-  margin-bottom: -50px;
+  margin-bottom: 1.5rem;
   font-weight: normal;
 }
+body .container section div { /* Global */
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (min-width: 401px) {
+  body .container section div { /* big */
+    width: 50vw;
+  }
+}
+@media (max-width: 400px) {
+  body .container section div {
+    width: 70vw;
+  }
+}
 body .container section div#about {
-  width: 50vw;
-  height: 60vh;
   gap: 50px;
   display: flex;
   padding: 25px;
   background-color: #0b0b13;
   box-shadow: 0px 0px 50px #4343F5;
   border-radius: 25px;
+  text-align: justify;
+}
+@media (max-width: 400px) {
+  body .container section div#about {
+    flex-direction: column;
+  }
+}
+body .container section div#about img {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 400px) {
+  body .container section div#about img {
+    max-width: 200px;
+  }
+}
+@media (min-width: 401px) {
+  body .container section div#about img {
+    max-width: 50%;
+  }
 }
 body .container section div#projects {
-  width: 50vw;
-  height: 60vh;
   padding: 25px;
   background-color: #0b0b13;
   box-shadow: 0px 0px 50px #c5429e;

@@ -31,7 +31,9 @@ menuItems.forEach((item, index) => {
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
+const redirectStart = () => {
+    window.location.href = "/#"
+}
 const redirectAbout = () => {
     window.location.href = "/#rAbout"
 }
