@@ -26,15 +26,33 @@ body {
             margin: 0;
 
             div.welcome {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 h1 {
-                    font-size: min(32vw, 32rem);
+                    @include breakpoints.media(">phone") {
+                        font-size: 24rem;
+                    }
+                    @include breakpoints.media("<=phone")  {
+                        font-size: 12vh;
+                    }
                     margin-top: 0;
                     font-weight: 400;
+
+                    span {
+                        font-size: 1.5rem;
+                    }
                 }
                 h3 {
+                    @include breakpoints.media(">phone") {
+                        margin-bottom: -4rem; 
+                    }
+                    @include breakpoints.media("<=phone")  {
+                        margin-bottom: -1.5rem; 
+                    }
                     color: #f8f8ff;
                     font-size: 1.5rem;
-                    margin-bottom: 1.5rem; 
                     font-weight: normal;
                 }
             }

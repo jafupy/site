@@ -159,6 +159,8 @@ ul.card-list {
 @media (max-width: 400px) {
   ul.card-list {
     flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 0 !important;
   }
 }
 ul.card-list::-webkit-scrollbar {
@@ -173,10 +175,7 @@ ul.card-list::-webkit-scrollbar-track {
   background: transparent;
 }
 ul.card-list .card {
-  height: 350px;
-  min-width: 275px;
-  max-width: 275px;
-  flex: none none none;
+  flex: none;
   padding: 1.5rem;
   border-radius: 16px;
   background: #040406;
@@ -189,15 +188,46 @@ ul.card-list .card {
   clear: both;
   position: relative;
 }
-ul.card-list .card:focus-within ~ .card, ul.card-list .card:hover ~ .card {
-  transform: translateX(130px);
+@media (min-width: 401px) {
+  ul.card-list .card {
+    height: 350px;
+    min-width: 275px;
+    max-width: 275px;
+  }
+}
+@media (max-width: 400px) {
+  ul.card-list .card {
+    height: 300px;
+    min-width: 225px;
+  }
+}
+@media (min-width: 401px) {
+  ul.card-list .card:focus-within ~ .card, ul.card-list .card:hover ~ .card {
+    transform: translateX(130px);
+  }
+}
+@media (max-width: 400px) {
+  ul.card-list .card:focus-within ~ .card, ul.card-list .card:hover ~ .card {
+    transform: translateY(180px);
+  }
 }
 ul.card-list .card:hover {
-  transform: translateY(-1rem);
   box-shadow: -1rem 0 3rem rgb(165, 43, 202);
 }
-ul.card-list .card:not(:first-child) {
-  margin-left: -130px;
+@media (min-width: 401px) {
+  ul.card-list .card:hover {
+    transform: translateY(-1rem);
+  }
+}
+@media (min-width: 401px) {
+  ul.card-list .card:not(:first-child) {
+    margin-left: -130px;
+  }
+}
+@media (max-width: 400px) {
+  ul.card-list .card:not(:first-child) {
+    margin-top: -180px;
+  }
 }
 ul.card-list .card header {
   margin-bottom: auto;
@@ -265,16 +295,43 @@ body .container section {
   align-items: center;
   margin: 0;
 }
+body .container section div.welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body .container section div.welcome h1 {
-  font-size: min(32vw, 32rem);
   margin-top: 0;
   font-weight: 400;
+}
+@media (min-width: 401px) {
+  body .container section div.welcome h1 {
+    font-size: 24rem;
+  }
+}
+@media (max-width: 400px) {
+  body .container section div.welcome h1 {
+    font-size: 12vh;
+  }
+}
+body .container section div.welcome h1 span {
+  font-size: 1.5rem;
 }
 body .container section div.welcome h3 {
   color: #f8f8ff;
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
   font-weight: normal;
+}
+@media (min-width: 401px) {
+  body .container section div.welcome h3 {
+    margin-bottom: -4rem;
+  }
+}
+@media (max-width: 400px) {
+  body .container section div.welcome h3 {
+    margin-bottom: -1.5rem;
+  }
 }
 body .container section div { /* Global */
   height: -webkit-fit-content;

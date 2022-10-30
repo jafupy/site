@@ -5,6 +5,8 @@ ul.card-list {
 
     @include breakpoints.media("<=phone") {
         flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 0!important;
     }
     padding:3rem;
     padding-top: 6rem;
@@ -24,10 +26,17 @@ ul.card-list {
     }
 
     .card {
-        height: 350px;
-        min-width: 275px;
-        max-width: 275px;
-        flex:none none none;
+        @include breakpoints.media(">phone") {
+            height: 350px;
+            min-width: 275px;
+            max-width: 275px;
+        }
+        @include breakpoints.media("<=phone")  {
+            height: 300px;
+        min-width: 225px;
+        }
+        
+        flex:none;
 
         padding: 1.5rem;
         border-radius: 16px;
@@ -42,15 +51,31 @@ ul.card-list {
         position: relative;
 
         &:focus-within~.card, &:hover~.card {
-            transform: translateX(130px);
+            @include breakpoints.media(">phone") {
+                transform: translateX(130px);
+            }
+            @include breakpoints.media("<=phone")  {
+                transform: translateY(180px);
+            }
+            
+            
         } 
         
         &:hover {
-            transform: translateY(-1rem);
+            @include breakpoints.media(">phone") {
+                transform: translateY(-1rem);
+            }
+            
             box-shadow: -1rem 0 3rem rgb(165, 43, 202);
         } 
         &:not(:first-child) {
-            margin-left: -130px;
+            @include breakpoints.media(">phone") {
+                margin-left: -130px;
+            }
+            @include breakpoints.media("<=phone")  {
+                margin-top: -180px;
+            }
+            
         }
 
 
