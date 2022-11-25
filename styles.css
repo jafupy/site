@@ -352,8 +352,6 @@ body .container section div#about {
   gap: 50px;
   display: flex;
   padding: 25px;
-  background-color: #0b0b13;
-  box-shadow: 0px 0px 50px #4343F5;
   border-radius: 25px;
   text-align: justify;
 }
