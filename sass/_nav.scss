@@ -37,6 +37,7 @@ nav{
     margin: 0;
     font-size: 1.5em;
     display: flex;
+    z-index: 69000;
 
     @include breakpoints.media(">phone") {/* biga than fon */
         flex-direction: column;
