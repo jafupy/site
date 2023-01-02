@@ -113,11 +113,20 @@ section ul.grid article ul li {
 }
 
 ::-webkit-scrollbar {
-  width: 0.5rem;
-  height: 0rem;
-  background: transparent;
+  width: 1.25rem;
+}
+
+::-webkit-scrollbar-thumb {
+  --tw-gradient-from: var(--col5);
+  --tw-gradient-to: var(--col6);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
+  border-color: var(--col1);
+  border-width: 6px;
+  border-style: solid;
+  border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background-color: var(--col1);
 }
