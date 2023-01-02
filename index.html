@@ -1,101 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <title>JaFu.py</title>
-</head>
-<body>
-  <nav class="menu">
-    
-    <button onclick="redirectStart()" id="off"class="">
-      <svg class="icon" viewBox="0 0 24 24">
-        <path d="M3.8,6.6h16.4"/>
-        <path d="M20.2,12.1H3.8"/>
-        <path d="M3.8,17.5h16.4"/>
-      </svg>
-    </button>
-
-    <button onclick="redirectAbout()" class="menu__item" style="--bgColorItem: #4343f5;" >
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <rect x="3" y="4" width="18" height="16" rx="3" />
-        <circle cx="9" cy="10" r="2" />
-        <line x1="15" y1="8" x2="17" y2="8" />
-        <line x1="15" y1="12" x2="17" y2="12" />
-        <line x1="7" y1="16" x2="17" y2="16" />
-      </svg>
-    </button>
-
-    <button onclick="redirectProjects()"class="menu__item" style="--bgColorItem: #c5429e;" > 
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <rect x="4" y="4" width="6" height="6" rx="1" />
-        <rect x="4" y="14" width="6" height="6" rx="1" />
-        <rect x="14" y="14" width="6" height="6" rx="1" />
-        <line x1="14" y1="7" x2="20" y2="7" />
-        <line x1="17" y1="4" x2="17" y2="10" />
-      </svg>
-    </button>
-
-    <button class="menu__item" style="--bgColorItem:#65ddb7;">
-      <svg xmlns="http://www.w3.org/2000/svg" class="icon" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
-        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-        <circle cx="12" cy="12" r="4" />
-        <path d="M16 12v1.5a2.5 2.5 0 0 0 5 0v-1.5a9 9 0 1 0 -5.5 8.28" />
-      </svg>
-    </button>
-
-  </nav>
-
-
-    <div class="container">
-        <section class="page"> <!--welcome page-->
-          <div class = "welcome">
-            <h3>Welcome to</h3>
-            <h1>JaFu<span>.app</span></h1>
-          </div>
-        </section>
-        <section id = "rAbout"class = "page"> <!--about-->
-          <div id = "about"class = "box">
-            <img src="/assets/JaFu.py v4.png" alt="">
-            <div>
-              <h2>JaFu.about()</h2>
-              <p>Hi! I’m Jacob, an Apple sheep living in England. I write code, but also craft 3D models and design sleek interfaces.</p>
-            </div>
-          </div>
-        </section>
-        <section id="rProjects" class="page"> <!--projects-->
-          <div id = "projects" class = "box">
-          <h1>Projects</h1>
-          <ul class = "card-list">
-            <article class = card>
-              <header>
-                <p>26 Oct 2022</p>
-                <h2>This website (v2)</h2>
-              </header>
-              <ul class="tags">
-                <a href="">html, css, js</a>
-              </ul>
-            </article>
-
-            <article class = card>
-              <header>
-                <p>23 Oct 2022</p>
-                <h2>This website (v1)</h2>
-              </header>
-              <ul class="tags">
-                <a href="">html, css, js,</a>
-              </ul>
-            </article>
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="scroll.js" defer></script>
+    <title>JaFu.app</title>
+  </head>
+  <body>
+    <section class="hero">
+      <h3>Hello! I am</h3>
+      <h1>Jacob</h1>
+      <h3>aka JaFu</h3>
+    </section>
+    <section>
+      <h2 class="">About Me</h2>
+      <p class="">
+        Hello, my name is Jacob and I go by the online handle JaFu. I am a
+        13-year-old who likes web dev and lives in the south of England. I am
+        proficient in Javascript (including Typescript) and Python, and I am
+        currently learning Rust. I also have a basic understanding of HTML and
+        CSS. In my free time, I enjoy doing UI designs and playing games. My
+        long-term goal is to become a full stack or back end web developer.
+      </p>
+    </section>
+    <section>
+      <h1 class="text-4xl">Projects</h1>
+      <ul class="grid">
+        <article>
+          <header>
+            <h1 class="text-2xl">JaFu.app</h1>
+            <a class="text-1xl">This website.</a>
+          </header>
+          <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Github Pages</li>
+            <li>Github</li>
           </ul>
-        </div>
-        </section>
-    </div>
-
-  <script src="app.js"></script>
-</body>
+        </article>
+      </ul>
+    </section>
+  </body>
 </html>
+
+<!-- 
+                               _                 _____
+  |    |           |    |    /   \  |    |  |      |
+  |    |  \    /   |    |    |      |    |  |      |
+  \ __ /   \/\/    \ __ /    \ _ /  \ __ /  |_ _   |
+
+  -->
