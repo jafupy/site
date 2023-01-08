@@ -1,3 +1,5 @@
-.vscode/*
+.vscode
 package.json
 package-lock.json
+server.js
+node_modules

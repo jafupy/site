@@ -1,14 +1,89 @@
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
-:root {
-  --col1: #d6f5e8;
-  --col2: #a9ead8;
-  --col3: #7cded3;
-  --col4: #50cfd3;
-  --col5: #2fa2bc;
-  --col6: #246b8f;
-  --col7: #183e62;
-  --col8: #0d1c35;
-  --col9: #020308;
+@-webkit-keyframes float {
+  from, to {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+}
+@keyframes float {
+  from, to {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-5%);
+  }
+}
+@-webkit-keyframes background-pan {
+  from {
+    background-position: 1000% center;
+  }
+  to {
+    background-position: 0% center;
+  }
+}
+@keyframes background-pan {
+  from {
+    background-position: 1000% center;
+  }
+  to {
+    background-position: 0% center;
+  }
+}
+.line {
+  display: flex;
+  justify-content: space-between;
+}
+
+.word {
+  margin: 0rem;
+  transition: opacity 250ms ease;
+}
+
+a {
+  text-decoration: none;
+}
+
+#text:has(.fancy:hover) .word:not(.fancy:hover) {
+  opacity: 0.2;
+}
+
+.fancy span {
+  display: inline-block;
+}
+
+.fancy > .outer {
+  transition: transform 350ms ease;
+}
+
+.fancy:hover > .outer {
+  transition-duration: 800ms;
+}
+
+.fancy:hover > .outer > .inner {
+  -webkit-animation: float 5s ease infinite;
+          animation: float 5s ease infinite;
+}
+
+.fancy:hover > .outer:nth-child(1) {
+  transform: translate(-80%, 60%) rotate(8deg);
+}
+
+.fancy:hover > .outer:nth-child(2) {
+  transform: translate(-10%, 60%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(3) {
+  transform: translate(0%, 20%) rotate(-3deg);
+}
+
+.fancy:hover > .outer:nth-child(4) {
+  transform: translate(0%, 15%) rotate(-6deg);
+}
+
+.fancy:hover > .outer:nth-child(5) {
+  transform: translate(60%, -30%) rotate(-10deg);
 }
 
 body {
@@ -18,15 +93,15 @@ body {
   padding: 0;
   margin: 0;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   overflow-x: hidden;
-  background-image: url("https://images.unsplash.com/photo-1575908524891-b0bdd2b99f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+  background: url("https://images.unsplash.com/photo-1575908524891-b0bdd2b99f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80") no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   -webkit-backdrop-filter: blur(var(--blur));
-  backdrop-filter: blur(var(--blur));
+          backdrop-filter: blur(var(--blur));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1,
@@ -119,16 +194,13 @@ section ul.grid article ul li {
 }
 
 ::-webkit-scrollbar-thumb {
-  --tw-gradient-from: var(--col5);
-  --tw-gradient-to: var(--col6);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  border-color: var(--col1);
+  background-color: #2fa2bc;
+  border-color: #d6f5e8;
   border-width: 6px;
   border-style: solid;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-track {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), var(--col1));
+  background-color: #d6f5e8;
 }

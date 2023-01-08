@@ -1,17 +1,15 @@
-@import "./scss/_main";
-
+@use "_text.module.scss";
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
-:root {
-  --col1: #d6f5e8;
-  --col2: #a9ead8;
-  --col3: #7cded3;
-  --col4: #50cfd3;
-  --col5: #2fa2bc;
-  --col6: #246b8f;
-  --col7: #183e62;
-  --col8: #0d1c35;
-  --col9: #020308;
-}
+
+$col1: #d6f5e8;
+$col2: #a9ead8;
+$col3: #7cded3;
+$col4: #50cfd3;
+$col5: #2fa2bc;
+$col6: #246b8f;
+$col7: #183e62;
+$col8: #0d1c35;
+$col9: #020308;
 
 body {
   font-family: "Urbanist", sans-serif;
@@ -24,12 +22,13 @@ body {
   min-height: 100vh;
   overflow-x: hidden;
 
-  background-image: url("https://images.unsplash.com/photo-1575908524891-b0bdd2b99f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80");
+  background: url("https://images.unsplash.com/photo-1575908524891-b0bdd2b99f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80")
+    no-repeat center center fixed;
   background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   backdrop-filter: blur(var(--blur));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1,
@@ -131,16 +130,13 @@ section {
 }
 
 ::-webkit-scrollbar-thumb {
-  --tw-gradient-from: var(--col5);
-  --tw-gradient-to: var(--col6);
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
-  background-image: linear-gradient(to bottom, var(--tw-gradient-stops));
-  border-color: var(--col1);
+  background-color: #2fa2bc;
+  border-color: $col1;
   border-width: 6px;
   border-style: solid;
   border-radius: 9999px;
 }
 
 ::-webkit-scrollbar-track {
-  background-image: linear-gradient(to left, rgba(0, 0, 0, 0.1), var(--col1));
+  background-color: $col1;
 }
