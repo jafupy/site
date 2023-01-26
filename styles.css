@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Urbanist&display=swap");
 @-webkit-keyframes float {
   from, to {
@@ -38,14 +39,19 @@
 
 .word {
   margin: 0rem;
-  transition: opacity 250ms ease;
+  transition-duration: 800ms;
+}
+
+.word.fancy:hover {
+  font-size: 7rem;
 }
 
 a {
   text-decoration: none;
 }
 
-#text:has(.fancy:hover) .word:not(.fancy:hover) {
+#text:has(.fancy:hover) .word:not(.fancy:hover),
+#text:has(.fancy:active) .word:not(.fancy:active) {
   opacity: 0.2;
 }
 
@@ -66,24 +72,47 @@ a {
           animation: float 5s ease infinite;
 }
 
-.fancy:hover > .outer:nth-child(1) {
-  transform: translate(-80%, 60%) rotate(8deg);
+.fancy:hover > .outer:nth-child(1),
+.fancy:active > .outer:nth-child(1) {
+  transform: translate(-80%, 30%) rotate(8deg);
 }
 
-.fancy:hover > .outer:nth-child(2) {
-  transform: translate(-10%, 60%) rotate(-6deg);
+.fancy:hover > .outer:nth-child(2),
+.fancy:active > .outer:nth-child(2) {
+  transform: translate(-10%, 15%) rotate(-6deg);
 }
 
-.fancy:hover > .outer:nth-child(3) {
+.fancy:hover > .outer:nth-child(3),
+.fancy:active > .outer:nth-child(3) {
   transform: translate(0%, 20%) rotate(-3deg);
 }
 
-.fancy:hover > .outer:nth-child(4) {
-  transform: translate(0%, 15%) rotate(-6deg);
+.fancy:hover > .outer:nth-child(4),
+.fancy:active > .outer:nth-child(4) {
+  transform: translate(10%, -15%) rotate(-6deg);
 }
 
-.fancy:hover > .outer:nth-child(5) {
-  transform: translate(60%, -30%) rotate(-10deg);
+.fancy:hover > .outer:nth-child(5),
+.fancy:active > .outer:nth-child(5) {
+  transform: translate(80%, -30%) rotate(-10deg);
+}
+
+body#DivineBook {
+  background: #d3d3a1;
+}
+body#DivineBook section {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body#DivineBook section p {
+  text-align: justify;
+}
+body#DivineBook section p span.hand {
+  font-family: "Indie Flower", cursive;
+  font-size: 1.5rem;
+  color: #030311;
+  padding-inline: 1.5;
 }
 
 body {
@@ -150,43 +179,6 @@ section.hero h3 {
   font-size: 1.5rem;
   text-align: center;
   margin: 0;
-}
-section ul.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 1rem;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-section ul.grid article {
-  width: 275px;
-  height: 370px;
-  display: flex;
-  flex-direction: column;
-  background-color: rgba(255, 255, 255, 0.2274509804);
-  box-shadow: 0px 0px 20px rgba(143, 39, 39, 0.3);
-  padding: 1rem;
-  border-radius: 0.5rem;
-  position: relative;
-}
-section ul.grid article ul {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  gap: 0.2rem;
-  margin-top: auto;
-}
-section ul.grid article ul li {
-  list-style: circle;
-  margin: 0.65rem;
-  flex: none;
-  border-radius: 1rem;
-  font-size: 0.75 rem;
 }
 
 ::-webkit-scrollbar {

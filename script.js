@@ -33,3 +33,10 @@ const enhance = (id) => {
 };
 
 enhance("channel-link");
+
+const chonk = () => {
+  const chonnky = document.querySelector("#text");
+  chonnky.addEventListener("click", () => {
+    chonnky.style.toggle("clicked");
+  });
+};
