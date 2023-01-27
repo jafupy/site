@@ -4,9 +4,16 @@ body#DivineBook {
   background: #d3d3a1;
   section {
     height: fit-content;
+    h2 {
+      margin-top: 0;
+    }
+    h3 {
+      margin-bottom: 0;
+      opacity: 0.75;
+    }
     p {
       text-align: justify;
-      span.hand {
+      span.note {
         font-family: "Indie Flower", cursive;
         font-size: 1.5rem;
         color: #030311;

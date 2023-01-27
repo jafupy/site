@@ -105,10 +105,17 @@ body#DivineBook section {
   height: -moz-fit-content;
   height: fit-content;
 }
+body#DivineBook section h2 {
+  margin-top: 0;
+}
+body#DivineBook section h3 {
+  margin-bottom: 0;
+  opacity: 0.75;
+}
 body#DivineBook section p {
   text-align: justify;
 }
-body#DivineBook section p span.hand {
+body#DivineBook section p span.note {
   font-family: "Indie Flower", cursive;
   font-size: 1.5rem;
   color: #030311;
