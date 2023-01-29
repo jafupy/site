@@ -6,37 +6,56 @@ window.addEventListener("scroll", function () {
   console.log(clamp(scroll / 20, 0, 30));
 });
 
-const rand = (min, max) => Math.floor(Math.random() * (max - min + 1)) + min;
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-const enhance = (id) => {
-  const element = document.getElementById(id),
-    text = element.innerText.split("");
-  element.innerText = "";
+let interval = null;
 
-  text.forEach((value, index) => {
-    const outer = document.createElement("span");
-    outer.className = "outer";
+const Dname = (event) => {
+  const original = "Jacob";
 
-    const inner = document.createElement("span");
-    inner.className = "inner";
-    inner.style.animationDelay = `${rand(-5000, 0)}ms`;
+  let iteration = 0;
 
-    const letter = document.createElement("span");
-    letter.className = "letter";
-    letter.innerText = value;
-    letter.style.animationDelay = `${index * 1000}ms`;
+  clearInterval(interval);
 
-    inner.appendChild(letter);
-    outer.appendChild(inner);
-    element.appendChild(outer);
-  });
+  interval = setInterval(() => {
+    event.target.innerText = event.target.innerText
+      .split("")
+      .map((letter, index) => {
+        if (index < iteration) {
+          return event.target.dataset.value[index];
+        }
+
+        return letters[Math.floor(Math.random() * 26)];
+      })
+      .join("");
+
+    if (iteration >= event.target.dataset.value.length) {
+      clearInterval(interval);
+      setTimeout(() => {
+        let iteration = 0;
+        interval = setInterval(() => {
+          event.target.innerText = original
+            .split("")
+            .map((letter, index) => {
+              if (index < iteration) {
+                return original[index];
+              }
+              return letters[Math.floor(Math.random() * 26)];
+            })
+            .join("");
+
+          if (iteration >= event.target.dataset.value.length) {
+            clearInterval(interval);
+          }
+
+          iteration += 1 / 5;
+        }, 50);
+      }, 2000);
+    }
+
+    iteration += 1 / 5;
+  }, 50);
 };
 
-enhance("channel-link");
-
-const chonk = () => {
-  const chonnky = document.querySelector("#text");
-  chonnky.addEventListener("click", () => {
-    chonnky.style.toggle("clicked");
-  });
-};
+document.querySelector("h1").onmouseover = Dname;
+document.querySelector("h1").addEventListener("click", Dname);

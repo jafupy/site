@@ -1,5 +1,5 @@
 .vscode
 package.json
 package-lock.json
-server.js
+scss.compiler.js
 node_modules
