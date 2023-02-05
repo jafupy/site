@@ -10,8 +10,8 @@ body {
   overflow-x: hidden;
   background: url("https://images.unsplash.com/photo-1575908524891-b0bdd2b99f90?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1632&q=80") no-repeat center center fixed;
   background-size: cover;
+  backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
-          backdrop-filter: blur(var(--blur));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,34 +65,18 @@ section.hero h3 {
   margin: 0;
 }
 
-::-webkit-scrollbar {
-  width: 1.25rem;
+::-webkit-scrollbar-track {
+  background: var(--col1);
 }
 
 ::-webkit-scrollbar-thumb {
-  background-color: #2fa2bc;
-  border-width: 6px;
-  border-style: solid;
-  border-radius: 9999px;
+  background: var(--col2);
 }
 
-@-webkit-keyframes float {
-  from, to {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(-5%);
-  }
+::-webkit-scrollbar-thumb:hover {
+  background: var(--col3);
 }
 
-@keyframes float {
-  from, to {
-    transform: translateY(0%);
-  }
-  50% {
-    transform: translateY(-5%);
-  }
-}
 @-webkit-keyframes background-pan {
   from {
     background-position: 1000% center;
@@ -101,6 +85,7 @@ section.hero h3 {
     background-position: 0% center;
   }
 }
+
 @keyframes background-pan {
   from {
     background-position: 1000% center;
@@ -172,4 +157,57 @@ a {
 .fancy:hover > .outer:nth-child(5),
 .fancy:active > .outer:nth-child(5) {
   transform: translate(80%, -30%) rotate(-10deg);
+}
+
+button {
+  background-color: #246b8f;
+  border: none;
+  border-radius: 1rem;
+  color: #d6f5e8;
+  padding-inline: 5rem;
+  padding-block: 1rem;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+button:hover {
+  padding-inline: 6rem;
+}
+
+.card {
+  background-color: #d6f5e8;
+  border-radius: 1rem;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: -moz-fit-content;
+  width: -webkit-fit-content;
+  width: fit-content;
+}
+.card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin: 0;
+}
+.card p {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+}
+.card button {
+  margin-top: 1rem;
+}
+.card ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+}
+.card ul span.status {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
 }

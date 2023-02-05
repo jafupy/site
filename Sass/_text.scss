@@ -1,17 +1,6 @@
 $green: rgb(42, 252, 152);
 $blue: rgb(41, 121, 255);
 
-@keyframes float {
-  from,
-  to {
-    transform: translateY(-0%);
-  }
-
-  50% {
-    transform: translateY(-5%);
-  }
-}
-
 @keyframes background-pan {
   from {
     background-position: 1000% center;

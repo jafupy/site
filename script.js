@@ -7,7 +7,6 @@ window.addEventListener("scroll", function () {
 });
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-
 let interval = null;
 
 const Dname = (event) => {
