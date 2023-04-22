@@ -83,3 +83,18 @@ section {
 ::-webkit-scrollbar-thumb:hover {
   background: var(--col3);
 }
+article {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 500px;
+
+  a {
+    font-style: italic;
+    transition: all 1s ease-in-out;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

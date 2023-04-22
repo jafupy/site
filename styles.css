@@ -77,6 +77,20 @@ section.hero h3 {
   background: var(--col3);
 }
 
+article {
+  background-color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  max-width: 500px;
+}
+article a {
+  font-style: italic;
+  transition: all 1s ease-in-out;
+}
+article a:hover {
+  text-decoration: underline;
+}
+
 @keyframes background-pan {
   from {
     background-position: 1000% center;
