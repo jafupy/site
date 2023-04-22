@@ -4,7 +4,7 @@
   scroll-behavior: smooth;
 }
 body {
-  transition: backdrop-filter 0s ease-in-out;
+  transition: backdrop-filter 0s ease-in-out !important;
   font-family: "Montserrat", sans-serif;
   font-size: 16px;
   line-height: 1.25;
@@ -112,6 +112,6 @@ nav {
 
 section#projects div {
   display: grid;
-  grid-template-columns: repeat(2, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 1rem;
 }
