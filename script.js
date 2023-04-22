@@ -3,7 +3,6 @@ window.addEventListener("scroll", function () {
   body = document.querySelector("body");
   const clamp = (num, min, max) => (num <= min ? min : num >= max ? max : num);
   body.style.setProperty("--blur", clamp(scroll / 50, 0, 30) + "px");
-  console.log(clamp(scroll / 20, 0, 30));
 });
 
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
