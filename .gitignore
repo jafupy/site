@@ -1,5 +1,1 @@
-.vscode
-package.json
-package-lock.json
-scss.compiler.js
-node_modules
+node_modules/*

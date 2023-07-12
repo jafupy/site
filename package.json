@@ -1,0 +1,30 @@
+{
+  "name": "vite-project",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "clear && vite dev",
+    "build": "clear && vite build",
+    "preview": "clear && vite preview",
+    "lint": "clear && prettier --plugin-search-dir . --check . && eslint ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.5.0",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.28.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-svelte": "^2.26.0",
+    "postcss": "^8.4.23",
+    "postcss-load-config": "^4.0.1",
+    "sass": "^1.62.0",
+    "svelte": "^3.54.0",
+    "svelte-preprocess": "^5.0.3",
+    "tailwindcss": "^3.3.1",
+    "vite": "^4.3.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@sveltejs/adapter-static": "^2.0.2"
+  }
+}
