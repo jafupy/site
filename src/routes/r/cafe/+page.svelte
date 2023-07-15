@@ -1,5 +1,5 @@
 <script>
-  import Redirect from "../Redirect.svelte";
+  import Redirect from "$lib/redirect.svelte";
 
   const data = {
     link: "https://discord.gg/bNjW3Jxshe",
