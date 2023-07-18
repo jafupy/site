@@ -10,13 +10,13 @@ body {
 	margin: 0;
 	padding: 2rem;
 	font-family: 'Plus Jakarta Sans', sans-serif;
-	background-color: $surface-50;
+	background-color: $clr-surface-50;
 	color: $clr-surface-900;
 }
 
 @media (prefers-color-scheme: dark) {
 	body {
-		background-color: $surface-900;
+		background-color: $clr-surface-900;
 		color: $clr-surface-50;
 	}
 }

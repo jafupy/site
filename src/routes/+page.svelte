@@ -175,7 +175,7 @@
       height: 2.5rem; /* 40px */
       margin-bottom: 1rem;
       animation: bounce 5s infinite ease-in-out;
-      stroke: $surface-50;
+      stroke: $clr- surface-50;
     }
   }
 

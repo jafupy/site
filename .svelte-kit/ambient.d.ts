@@ -45,6 +45,7 @@ declare module '$env/static/private' {
 	export const ZSH: string;
 	export const LSCOLORS: string;
 	export const NVM_INC: string;
+	export const npm_package_devDependencies_svelte_preprocess: string;
 	export const PAGER: string;
 	export const VSCODE_GIT_ASKPASS_MAIN: string;
 	export const VSCODE_GIT_ASKPASS_NODE: string;
@@ -157,6 +158,7 @@ declare module '$env/dynamic/private' {
 		ZSH: string;
 		LSCOLORS: string;
 		NVM_INC: string;
+		npm_package_devDependencies_svelte_preprocess: string;
 		PAGER: string;
 		VSCODE_GIT_ASKPASS_MAIN: string;
 		VSCODE_GIT_ASKPASS_NODE: string;
