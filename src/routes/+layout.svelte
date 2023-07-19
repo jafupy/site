@@ -3,8 +3,8 @@
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import '../app.scss';
-	import Nav from '../components/Nav.svelte';
-	import Footer from '../components/Footer.svelte';
+	import Nav from '$lib/components/Nav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	const path = $page.route.id;
 	onMount(() => {
 		const blob = document.getElementById('blob');
@@ -23,7 +23,7 @@
 	});
 </script>
 
-{#if !path.startsWith('' / r / '')}
+{#if !path.startsWith('/r/')}
 	<Nav />
 	<slot />
 	<div id="blob" />

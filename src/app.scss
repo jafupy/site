@@ -9,6 +9,7 @@
 body {
 	margin: 0;
 	padding: 2rem;
+	padding-bottom: 0;
 	font-family: 'Plus Jakarta Sans', sans-serif;
 	background-color: $clr-surface-50;
 	color: $clr-surface-900;
@@ -24,4 +25,18 @@ body {
 h1 {
 	font-size: 2rem;
 	font-weight: 400;
+}
+
+h2 {
+	font-size: 1.5rem;
+	font-weight: 400;
+	text-align: center;
+}
+
+section {
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
