@@ -9,6 +9,16 @@
 
 <script>
 	import { onMount } from 'svelte';
+	import MetaTags from '$lib/meta.svelte';
+
+	const data = {
+		name: 'Jacob (JaFu.py)',
+		description:
+			"I'm Jacob, a professional apple sheep with a passion for web development. Coding is my creative outlet, and I love building user-friendly web applications. As an 'Apple sheep,' I draw inspiration from their design and innovation. Currently I'm in school so I can't work on my projects full time.",
+		link: 'https://jafu.dev',
+		image:
+			'https://cdn.discordapp.com/avatars/692269055209373696/bcc17c079bafda6dd99545c3efbb9491.webp?size=2048'
+	};
 
 	const letters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 	const words = ['Jacob', 'JaFu.py'];
